@@ -1,20 +1,20 @@
 $(function(){
 	//prevent page from reloading on 'submit'
-	$('#house-search').on(submit, function(e){
+	$('#house-search').submit(function(e){
 		e.preventDefault();	
 	var houseSearch = $('house-search').val();
 	findHouse('houseSearch');
 	});
 });
 
-function findAHouse(houseSearch) {
+function findHouse(houseSearch) {
 	var params = {
 		citystatezip: houseSearch,
-		key: X1-ZWz19kmj7cegwb_1acr8,
+		key: 'X1-ZWz19kmj7cegwb_1acr8',
 	};
 
 $.ajax({
-		url: 'https://www.zillow.com/webservice/GetDeepSearchResults.htm';
+		url: 'https://www.zillow.com/webservice/GetDeepSearchResults.htm',
 		data: params,
 		dataType: "jsonp",
 		type: "GET",
@@ -28,7 +28,8 @@ $.ajax({
 	});
 })
 //switch from xml to json
-var xml = 
+var xml = 'https://www.zillow.com/webservice/GetDeepSearchResults.htm',
+$xmlDoc = $.parseXML(xml)
 $xml = $(xmldoc),
 $citystatezip = $xml.find("citystatezip");	
 
