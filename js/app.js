@@ -14,7 +14,7 @@ function findAHouse(houseSearch) {
 	};
 
 $.ajax({
-		url: 'http://www.zillow.com/webservice/GetDeepSearchResults.htm';
+		url: 'https://www.zillow.com/webservice/GetDeepSearchResults.htm';
 		data: params,
 		dataType: "jsonp",
 		type: "GET",
@@ -27,7 +27,10 @@ $.ajax({
 		$('.results').append(house);
 	});
 })
-	
+//switch from xml to json
+var xml = 
+$xml = $(xmldoc),
+$citystatezip = $xml.find("citystatezip");	
 
 
 };//end of code
