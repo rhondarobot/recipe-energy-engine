@@ -7,6 +7,12 @@ $(function(){
 	});
 });
 
+
+//still need to add the different parameters for the code to append to html table
+
+
+
+
 function findHouse(houseSearch) {
 	var params = {
 		citystatezip: houseSearch,
