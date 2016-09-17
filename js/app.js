@@ -3,7 +3,7 @@ $(function(){
 	$('#house-search').submit(function(e){
 		e.preventDefault();	
 	var houseSearch = $('house-search').val();
-	findHouse('houseSearch');
+	findHouse(houseSearch);
 	});
 });
 
