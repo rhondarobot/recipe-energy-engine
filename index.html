@@ -2,55 +2,52 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Home Search</title>
+	<title>Healthy Meal Search</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="wrapper">
-		<form id="house-search">
-			<div>Welcome Home <i class="fa fa-heart" aria-hidden="true"></i></div>
-			<input type="text" placeholder="Search for your next home here" id="inputHomeSearch">
-			<input type="submit" value="Find" id="Find">
+		<form id="ingredient-search">
+			<div>Add Ingredients <i class="fa fa-apple" aria-hidden="true"></i></div>
+			<input type="text" placeholder="Search for your next meal here" id="inputIngredient">
+			<input type="submit" value="Feed Me" id="Find">
 		</form>
-		<div class="instructions">Search by city, state, zip code</div>
+		<div class="instructions">Add ingredients to your pantry/fridge</div>
 	</div>
 	
 	<div class="results"></div>
     <div class="templates hidden"> 
-    	<dl class="house-results">
-    		<dt><strong>Address:</strong></dt>
-    			<dd class="address-input"></dd>
-    		<dt>Type of Home:</dt>
-				<dd class="home-type"></dd>
-			<dt>Year Built:</dt>
-				<dd class="year-built"></dd>
-			<dt>Lot Size:</dt>
-				<dd class="lot-size"></dd>
-			<dt>Bathrooms:</dt>
-				<dd class="bathrooms"></dd>
-			<dt>Bedrooms:</dt>
-				<dd class="bedrooms"></dd>
-			<dt>Last Sold:</dt>
-				<dd class="last-sold"></dd>
-			<dt>Last Sold Price:</dt>
-				<dd class="last-sold-price" currency="USD"></dd>
-			<dt>Value Change:</dt>
-				<dd class="value-change" duration="30" currency="USD"></dd>
-			<dt>Region:</dt>
-				<dd class="region" region id="" type="" name=""></dd>	
+    	<dl class="recipe-results">
+    		<dt><strong>Recipes:</strong></dt>
+    		<dt>Name of Food	
+    			<dd class="food-name"></dd>
+    		<dt>Type of Diet food adheres to:</dt>
+				<dd class="diet-type"></dd>
+			<dt>Calories:</dt>
+				<dd class="calories"></dd>
+			<dt>Health Label:</dt>
+				<dd class="health-label"></dd>
+			<dt>Measurement:</dt>
+				<dd class="measurement"></dd>
+			<dt>Nutrition:</dt>
+				<dd class="nutrition-label"></dd>
+			<dt>Difficulty Level:</dt>
+				<dd class="difficulty-level"></dd>
+			<dt>Yield:</dt>
+				<dd class="yield"</dd>
+			<dt>Ingredients:</dt>
+				<dd class="ingredients"></dd>
+			<dt>Summary:</dt>
+				<dd class="summary"></dd>	
 		</dl>
 	</div>				
 	
 
 
 <footer>
-	<div="zillow-logo-disclaimer">
-	© Zillow, Inc., 2006-2016. Use is subject to Terms of Use
-What's a Zestimate?
-	<img src="https://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif">
-	</div="zillow-logo-disclaimer">	
+	<img src="images/food-pic.jpeg" width=600 height=300>	
 </footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="js/app.js"></script>
