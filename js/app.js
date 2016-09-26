@@ -24,8 +24,14 @@ var showRecipe = function(item) {
     recipeLink.text(item.recipe.label);
 
     var recipeYield = recipeResults.find('.yield');
-    recipeYield.text(item.recipe.yield);
+    recipeYield.text(item.recipe.yield + ' people');
 
+    var recipeKCal = recipeResults.find('.calories');
+    recipeKCal.text(Math.round(item.recipe.calories));
+
+    var servingKcals = item.recipe.calories/item.recipe.yield;
+    	$('.serving-calories').html(servingKcals);
+    
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
 
@@ -38,9 +44,6 @@ var showRecipe = function(item) {
     	if (item.recipe.dietLabels.length === 0) {
     		$('.diet-type').html('Not Applicable');
     	};
-
-    var recipeKCal = recipeResults.find('.calories');
-    recipeKCal.text(Math.round(item.recipe.calories));
     
     var recipeHealth = recipeResults.find('.health-label');
     recipeHealth.text(item.recipe.healthLabels);
