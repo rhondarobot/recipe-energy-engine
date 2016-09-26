@@ -6,3 +6,8 @@ body {
 .hidden {
 	display: none;
 }
+
+.results {
+	box-sizing: border-box;
+	width: 100%;
+}

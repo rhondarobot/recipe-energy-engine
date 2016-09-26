@@ -46,7 +46,7 @@ var showRecipe = function(item) {
     recipeHealth.text(item.recipe.healthLabels);
 
     var recipeMeasurement = recipeResults.find('.measurement');
-    recipeMeasurement.text(item.recipe.totalWeight + ' g');
+    recipeMeasurement.text(Math.round(item.recipe.totalWeight) + 'g');
 
 
 
