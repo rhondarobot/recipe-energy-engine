@@ -25,8 +25,9 @@ var showRecipe = function(item) {
     var recipeKCal = recipeResults.find('.calories');
     recipeKCal.text(Math.round(item.recipe.calories)  + ' Calories per Recipe');
 
-    var servingKcals = ((item.recipe.calories)/(item.recipe.yield));
-   	$('.serving-calories').html(servingKcals);
+    var servingKcals = (parseInt(item.recipe.calories)/parseInt(item.recipe.yield));
+    var servingCals = recipeResults.find('.serving-calories');
+   	servingCals.html(servingKcals);
     
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
@@ -38,7 +39,7 @@ var showRecipe = function(item) {
     recipeType.text(item.recipe.dietLabels);
     	//add string to 0 length arrays so item will not be blank
     	if (item.recipe.dietLabels.length === 0) {
-    		$('.diet-type').html('Not Applicable');
+    		recipeType.html('Not Applicable');
     	}
     
     var recipeHealth = recipeResults.find('.health-label');
