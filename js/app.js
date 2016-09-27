@@ -24,12 +24,12 @@ var showRecipe = function(item) {
     recipeLink.text(item.recipe.label);
 
     var recipeYield = recipeResults.find('.yield');
-    recipeYield.text(item.recipe.yield + ' people');
+    recipeYield.text(item.recipe.yield + ' servings');
 
     var recipeKCal = recipeResults.find('.calories');
-    recipeKCal.text(Math.round(item.recipe.calories));
+    recipeKCal.text(Math.round(item.recipe.calories)  + ' Calories per Recipe');
 
-    var servingKcals = (item.recipe.calories/item.recipe.yield);
+    var servingKcals = ((item.recipe.calories)/(item.recipe.yield));
    	$('.serving-calories').html(servingKcals);
     
     var ingredientCount = recipeResults.find('.ingredients-count');
@@ -88,7 +88,8 @@ var showRecipe = function(item) {
  		$('.result-count').html('Your search of ' + recipeSearch + ' returned '+ data.count + ' results');
  		$.each(data.hits,function(i, item){
  			var recipe = showRecipe(item);
- 			$('.results').append(.css('background-image',item.recipe.image + recipe));
+ 			$('.results').append(recipe);
+            //document.body.style.backgroundImage = "url(item.recipe.image)";
  		}); 
  	})
 };

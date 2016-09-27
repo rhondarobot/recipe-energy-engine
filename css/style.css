@@ -1,13 +1,56 @@
-body {
-	background-image: url('../images/food-pic.jpeg');
-	background-repeat: no-repeat;
-}
-
 .hidden {
 	display: none;
 }
 
-.results {
-	box-sizing: border-box;
-	width: 100%;
+.recipeResults {
+    /*background-image: url('../img/food.jpg');*/
+    background-position: center center;
+    background-size: cover;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    float: left;
+    font-family: sans-serif;
+    height: 200px;
+    margin: 20px 2.5%;
+    position: relative;
+    text-align: center;
+    width: 20%;
 }
+
+.info {
+    background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    display: none;
+    font-size: 18px;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.recipeResults a {
+    color: white;
+    text-decoration: none;
+}
+
+.results:hover .info {
+    display: block;
+}
+
+.results {
+    background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    display: block;
+    font-size: 20px;
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+}
+
+.results:hover .title {
+    display: none;
+}
+
