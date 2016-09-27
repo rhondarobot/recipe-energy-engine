@@ -16,12 +16,8 @@ var showRecipe = function(item) {
     recipeLink.attr('href',item.recipe.uri);
     recipeLink.text(item.recipe.label);
 
-    var recipeImage = recipeResults.find('.recipe-image img');
-    recipeImage.attr('src',item.recipe.image);
-
-    var recipeLink = recipeResults.find('.recipe-link a');
-    recipeLink.attr('href',item.recipe.uri);
-    recipeLink.text(item.recipe.label);
+    // var recipeImage = recipeResults.find('.recipe-image');
+    recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');
 
     var recipeYield = recipeResults.find('.yield');
     recipeYield.text(item.recipe.yield + ' servings');
@@ -43,21 +39,13 @@ var showRecipe = function(item) {
     	//add string to 0 length arrays so item will not be blank
     	if (item.recipe.dietLabels.length === 0) {
     		$('.diet-type').html('Not Applicable');
-    	};
+    	}
     
     var recipeHealth = recipeResults.find('.health-label');
     recipeHealth.text(item.recipe.healthLabels);
 
     var recipeMeasurement = recipeResults.find('.measurement');
     recipeMeasurement.text(Math.round(item.recipe.totalWeight) + 'g');
-
-
-
-    
-
-
-
-
 
     var nutritionLabel = recipeResults.find('.nutrition-label');
     //move this to the bottom or side-bottom. Want to make a nutrition table/label
@@ -91,7 +79,7 @@ var showRecipe = function(item) {
  			$('.results').append(recipe);
             //document.body.style.backgroundImage = "url(item.recipe.image)";
  		}); 
- 	})
-};
+ 	});
+}
 
 
