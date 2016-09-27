@@ -13,12 +13,12 @@
 
 <body>
 	<div class="wrapper">
-		<form id="ingredient-search">
+		<form class="ingredient-search">
 			<div>Search recipes by ingredients or recipe names <i class="fa fa-apple" aria-hidden="true"></i></div>
-			<input type="text" placeholder="Search for your next meal here" id="inputIngredient">
-			<input type="submit" value="Feed Me" id="Find">
+			<input type="text" placeholder="Search for your next meal here" class="inputIngredient">
+			<input type="submit" value="Feed Me" class="find">
 		</form>	
-		<form id="calorie-search">
+		<form class="calorie-search">
 			<div>Or Search By Calorie Content Range:
 			<div><span>From </span>
 			<input type="number" id="lowNum"><span> to </span>
@@ -26,6 +26,28 @@
 			<input type="submit" id="calorie-submit" value="Search">
 		</form>
 	</div>
+	<div class="results">
+			<div class="title"></div>
+			<div class="templates hidden">
+			<div class="recipeResults">
+				<p class="yield"></p>
+				<p class="calories"></p>
+				<p class="diet-type"></p>
+				<p class="ingredients"></p>
+				<p class="recipe-link"><a href="#"></a></p>
+			</div>
+			</div>
+		</div>	
+	</div>		
+
+	
+
+
+
+
+
+
+	<!--
 	<p class="result-count"></p>
 	<div class="results"></div>
     <div class="templates hidden">
@@ -52,7 +74,7 @@
 			<dt>Nutrients:</dt>
 				<dd class="nutrition-label"></dd>
 		</dl>
-	</div>				
+	</div>	-->			
 	
 
 

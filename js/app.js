@@ -1,8 +1,8 @@
  $(function(){
  	//prevent page from reloading on 'submit'
- 	$('#ingredient-search').submit(function(e){
+ 	$('.ingredient-search').submit(function(e){
  		e.preventDefault();	
- 	var recipeSearch = $('#inputIngredient').val();
+ 	var recipeSearch = $('.inputIngredient').val();
  	findRecipe(recipeSearch);	
  	});
  });
@@ -29,8 +29,8 @@ var showRecipe = function(item) {
     var recipeKCal = recipeResults.find('.calories');
     recipeKCal.text(Math.round(item.recipe.calories));
 
-    var servingKcals = item.recipe.calories/item.recipe.yield;
-    	$('.serving-calories').html(servingKcals);
+    var servingKcals = (item.recipe.calories/item.recipe.yield);
+   	$('.serving-calories').html(servingKcals);
     
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
@@ -88,7 +88,7 @@ var showRecipe = function(item) {
  		$('.result-count').html('Your search of ' + recipeSearch + ' returned '+ data.count + ' results');
  		$.each(data.hits,function(i, item){
  			var recipe = showRecipe(item);
- 			$('.results').append(recipe);
+ 			$('.results').append(.css('background-image',item.recipe.image + recipe));
  		}); 
  	})
 };
