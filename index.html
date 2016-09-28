@@ -6,12 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 </head>
 
 <header>
-	<h1>Recipe Energy Engine</h1>
+	<h1>Recipe   Energy   Engine</h1>
 	<h3>Welcome!</h3>
-	<p>Find your next recipe based on <span class="your">YOUR</span> preferences.  Want to search for gluten-free recipes?  Type in 'gluten-free' in the search bar. Want to search by vitamins? Try typing in 'vitamin C'. What about minerals? Yes! Try typing in 'calcium' to return foods with calcium.</p>
+	<p class="intro">Find your next recipe based on <span class="your">YOUR</span> preferences.  Want to search for gluten-free recipes?  Type in 'gluten-free' in the search bar. Want to search by vitamins? Try typing in 'vitamin C'. What about minerals? Yes! Try typing in a mineral like 'calcium' to return foods with calcium.</p>
 </header>
 
 <body>
@@ -24,8 +25,8 @@
 		<form class="calorie-search">
 			<div>Or Search By Calorie Content Range:
 			<div><span>From </span>
-			<input type="number" id="lowNum"><span> to </span>
-			<input type="number"> Calories</div>
+			<input type="number" class="lowNum"><span> to </span>
+			<input type="number" class="highNum"> Calories</div>
 			<input type="submit" class="calorie-submit" value="Search">
 		</form>
 	</div>

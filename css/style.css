@@ -9,28 +9,49 @@ body {
 
 h1 {
     text-align: center;
+    font-family: 'Bungee Shade', Arial, sans-serif;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.intro { /*how come the padding is not centered?*/
+    padding: 10px;
+    text-align: center;
 }
 
 .find { 
     background-color: #fff;
     border-radius: 5px;
+    text-align: center;
 }
 
 .inputIngredient {
     width: 500px;
+    text-align: center;
 }
-.calorie-submit {
-    display: inline-block;
+.calorie-submit { /*how to center button below but centered from search fields*/
     background-color: #fff;
     border-radius: 5px;
+    text-align: center;
+    margin-top: 6px;
 }
-
+.ingredient-search {
+    text-align: center;
+}
 .calorie-search {
     margin-top: 20px;
+    text-align: center
 }
 
 .hidden {
     display: none;
+}
+
+.result-count {
+    padding-left: 20px;
 }
 
 .recipeResults {
@@ -92,3 +113,7 @@ a.pink:hover { color: #d529cd; }
 .recipeResults:hover .recipe-link {
     display: none;
 }
+
+/*footer {
+    bottom: 0;
+}  <- goal is to get footer on the bottom */
