@@ -1,5 +1,5 @@
 .hidden {
-	display: none;
+    display: none;
 }
 
 .recipeResults {
@@ -30,17 +30,7 @@
     top: 0;
 }
 
-
-.recipeResults a {
-    color: white;
-    text-decoration: none;
-}
-
-.results:hover .info {
-    display: block;
-}
-
-.results {
+.recipe-link {
     background-color: rgba(0,0,0,0.5);
     bottom: 0;
     display: block;
@@ -48,9 +38,19 @@
     padding: 15px 0;
     position: absolute;
     width: 100%;
+    margin: 0;
 }
 
-.results:hover .title {
+
+.recipeResults a {
+    color: white;
+    text-decoration: none;
+}
+
+.recipeResults:hover .info {
+    display: block;
+}
+
+.recipeResults:hover .recipe-link {
     display: none;
 }
-

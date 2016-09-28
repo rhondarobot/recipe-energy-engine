@@ -1,27 +1,40 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @rhondarobot
+ Unwatch 2
+  Star 0
+ Fork 0 rhondarobot/food-api
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
+Tree: f08d974db4 Find file Copy pathfood-api/js/app.js
+f08d974  10 hours ago
+@tjstalcup tjstalcup Updates styles of results
+2 contributors @rhondarobot @tjstalcup
+RawBlameHistory     
+86 lines (65 sloc)  2.68 KB
  $(function(){
- 	//prevent page from reloading on 'submit'
- 	$('.ingredient-search').submit(function(e){
- 		e.preventDefault();	
- 	var recipeSearch = $('.inputIngredient').val();
- 	findRecipe(recipeSearch);	
- 	});
+    //prevent page from reloading on 'submit'
+    $('.ingredient-search').submit(function(e){
+        e.preventDefault(); 
+    var recipeSearch = $('.inputIngredient').val();
+    findRecipe(recipeSearch);   
+    });
  });
  //still need to add the different parameters for the code to append to html table
 var showRecipe = function(item) {
-	//appending template to DOM when query deploys
-	var recipeResults =  $('.templates .recipeResults').clone();
+    //appending template to DOM when query deploys
+    var recipeResults =  $('.templates .recipeResults').clone();
 
-	//set the recipe results in 'results'
-	var recipeLink = recipeResults.find('.recipe-link a');
-    recipeLink.attr('href',item.recipe.uri);
-    recipeLink.text(item.recipe.label);
-
-    var recipeImage = recipeResults.find('.recipe-image img');
-    recipeImage.attr('src',item.recipe.image);
-
+    //set the recipe results in 'results'
     var recipeLink = recipeResults.find('.recipe-link a');
     recipeLink.attr('href',item.recipe.uri);
     recipeLink.text(item.recipe.label);
+
+    // var recipeImage = recipeResults.find('.recipe-image');
+    recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');
 
     var recipeYield = recipeResults.find('.yield');
     recipeYield.text(item.recipe.yield + ' servings');
@@ -30,7 +43,7 @@ var showRecipe = function(item) {
     recipeKCal.text(Math.round(item.recipe.calories)  + ' Calories per Recipe');
 
     var servingKcals = ((item.recipe.calories)/(item.recipe.yield));
-   	$('.serving-calories').html(servingKcals);
+    $('.serving-calories').html(servingKcals);
     
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
@@ -40,10 +53,10 @@ var showRecipe = function(item) {
 
     var recipeType = recipeResults.find('.diet-type');
     recipeType.text(item.recipe.dietLabels);
-    	//add string to 0 length arrays so item will not be blank
-    	if (item.recipe.dietLabels.length === 0) {
-    		$('.diet-type').html('Not Applicable');
-    	};
+        //add string to 0 length arrays so item will not be blank
+        if (item.recipe.dietLabels.length === 0) {
+            $('.diet-type').html('Not Applicable');
+        }
     
     var recipeHealth = recipeResults.find('.health-label');
     recipeHealth.text(item.recipe.healthLabels);
@@ -51,47 +64,41 @@ var showRecipe = function(item) {
     var recipeMeasurement = recipeResults.find('.measurement');
     recipeMeasurement.text(Math.round(item.recipe.totalWeight) + 'g');
 
-
-
-    
-
-
-
-
-
     var nutritionLabel = recipeResults.find('.nutrition-label');
     //move this to the bottom or side-bottom. Want to make a nutrition table/label
     //nutritionLabel.text
 
     return recipeResults;
-};	
+};  
 
 
 
 
  function findRecipe(recipeSearch) {
- 	var recipeParams = {
- 		q: recipeSearch,
- 		'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
-		'app-id': '4bdd672f'
- 	};
+    var recipeParams = {
+        q: recipeSearch,
+        'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
+        'app-id': '4bdd672f'
+    };
 
-	$.ajax({
- 		url: 'https://api.edamam.com/search',
- 		data: recipeParams,
- 		dataType: "jsonp",
- 		type: "GET",
- 	})	
- 	.done(function(data){
- 		console.log(data);
+    $.ajax({
+        url: 'https://api.edamam.com/search',
+        data: recipeParams,
+        dataType: "jsonp",
+        type: "GET",
+    })  
+    .done(function(data){
+        console.log(data);
 
- 		$('.result-count').html('Your search of ' + recipeSearch + ' returned '+ data.count + ' results');
- 		$.each(data.hits,function(i, item){
- 			var recipe = showRecipe(item);
- 			$('.results').append(recipe);
+        $('.result-count').html('Your search of ' + recipeSearch + ' returned '+ data.count + ' results');
+        $.each(data.hits,function(i, item){
+            var recipe = showRecipe(item);
+            $('.results').append(recipe);
             //document.body.style.backgroundImage = "url(item.recipe.image)";
- 		}); 
- 	})
-};
+        }); 
+    });
+}
 
 
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
