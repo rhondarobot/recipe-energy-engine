@@ -9,6 +9,9 @@
 </head>
 
 <header>
+	<h1>Recipe Energy Engine</h1>
+	<h3>Welcome!</h3>
+	<p>Find your next recipe based on <span class="your">YOUR</span> preferences.  Want to search for gluten-free recipes?  Type in 'gluten-free' in the search bar. Want to search by vitamins? Try typing in 'vitamin C'. What about minerals? Yes! Try typing in 'calcium' to return foods with calcium.</p>
 </header>
 
 <body>
@@ -23,7 +26,7 @@
 			<div><span>From </span>
 			<input type="number" id="lowNum"><span> to </span>
 			<input type="number"> Calories</div>
-			<input type="submit" id="calorie-submit" value="Search">
+			<input type="submit" class="calorie-submit" value="Search">
 		</form>
 	</div>
 	
@@ -33,26 +36,20 @@
     
     	<div class="recipeResults">
     		<p class='recipe-link'><a href="" target="_blank"></a></p>
-			<div class="info">	
-				<dl class="info-results">	
-					<dt>Serves:</dt>
-						<dd class="yield"></dd>
-					<dt>Calories per Recipe:</dt>
-						<dd class="calories"></dd>
-					<dt>Calories per Serving:</dt>
-						<dd class="serving-calories"></dd>
-		    		<dt>Type of Diet:</dt>
-		    			<dd class="diet-type"></dd>	
-					<dt>Special Diet(s):</dt>
-						<dd class="health-label"></dd>
-					<dt>Ingredients:</dt>
-						<dd class="ingredients-count"></dd>
-						<dd class="ingredients"></dd>
-					<dt>Nutrients:</dt>
-						<dd class="nutrition-label"></dd>
-				</dl>
-			</div>
+		<div class="info">	
+			<p class="yield"></p>
+			<p class="serving-calories"></p>
+			<p class="nutrients"></p>	
+		<!--<div class="expand">
+			<p class="diet-type"></p>
+			<p class="health-label"></p>
+			<p class="nutrition-label"></p>
+			<p class="ingredients"></p>
+		</div>	-->
 		</div>
+		</div>
+	</div>			
+					
 	
 
 

@@ -27,7 +27,7 @@ var showRecipe = function(item) {
 
     var servingKcals = (parseInt(item.recipe.calories)/parseInt(item.recipe.yield));
     var servingCals = recipeResults.find('.serving-calories');
-    servingCals.html(servingKcals);
+    servingCals.html(Math.round(servingKcals) + ' calories per serving');
     
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
@@ -48,7 +48,7 @@ var showRecipe = function(item) {
     var recipeMeasurement = recipeResults.find('.measurement');
     recipeMeasurement.text(Math.round(item.recipe.totalWeight) + 'g');
 
-    var nutritionLabel = recipeResults.find('.nutrition-label');
+    var nutrients = recipeResults.find('.nutrients');
     //move this to the bottom or side-bottom. Want to make a nutrition table/label
     //nutritionLabel.text
 
@@ -81,4 +81,22 @@ var showRecipe = function(item) {
             //document.body.style.backgroundImage = "url(item.recipe.image)";
         }); 
     });
+}
+
+  $('a').hover(function(e)
+    {
+        var randomClass = getRandomClass();
+        $(e.target).attr("class", randomClass);
+    });
+
+
+function getRandomClass()
+{
+    //Store available css classes
+    var classes = new Array("green", "purple", "teal", "violet", "pink");
+
+    //Get a random number from 0 to 4
+    var randomNumber = Math.floor(Math.random()*5);
+
+    return classes[randomNumber];
 }

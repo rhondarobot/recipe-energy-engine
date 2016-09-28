@@ -1,25 +1,58 @@
+body {
+    height: 1000px;
+    background: #e3fddb; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #e3fddb, #58dbdb); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #e3fddb, #58dbdb); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #e3fddb, #58dbdb); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #e3fddb, #58dbdb); /* Standard syntax (must be last) */
+}
+
+h1 {
+    text-align: center;
+}
+
+.find { 
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.inputIngredient {
+    width: 500px;
+}
+.calorie-submit {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.calorie-search {
+    margin-top: 20px;
+}
+
 .hidden {
     display: none;
 }
 
 .recipeResults {
-    /*background-image: url('../img/food.jpg');*/
     background-position: center center;
     background-size: cover;
     box-sizing: border-box;
+    border: 2px solid #FFF;
+    border-radius: 5px;
     color: white;
     display: block;
     float: left;
     font-family: sans-serif;
     height: 200px;
-    margin: 20px 2.5%;
+    margin: 20px 2%;
     position: relative;
     text-align: center;
     width: 20%;
 }
 
 .info {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5px;
     bottom: 0;
     display: none;
     font-size: 18px;
@@ -50,6 +83,11 @@
 .recipeResults:hover .info {
     display: block;
 }
+a.green:hover { background-color: #1ace84; }
+a.purple:hover { background-color: #a262c0; }
+a.teal:hover { color: #4ac0aa; }
+a.violet:hover { color: #8c78ba; }
+a.pink:hover { color: #d529cd; }
 
 .recipeResults:hover .recipe-link {
     display: none;
