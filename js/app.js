@@ -1,13 +1,14 @@
- $(function(){
- 	//prevent page from reloading on 'submit'
- 	$('.ingredient-search').submit(function(e){
- 		e.preventDefault();	
- 	var recipeSearch = $('.inputIngredient').val();
- 	findRecipe(recipeSearch);	
- 	});
+$(function(){
+    //prevent page from reloading on 'submit'
+    $('.ingredient-search').submit(function(e){
+        e.preventDefault(); 
+    var recipeSearch = $('.inputIngredient').val();
+    findRecipe(recipeSearch);   
+    });
  });
  //still need to add the different parameters for the code to append to html table
 var showRecipe = function(item) {
+<<<<<<< HEAD
 	//appending template to DOM when query deploys
 	var recipeResults =  $('.templates .recipeResults').clone();
 
@@ -18,6 +19,18 @@ var showRecipe = function(item) {
 
     // var recipeImage = recipeResults.find('.recipe-image');
     recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');
+=======
+    //appending template to DOM when query deploys
+    var recipeResults =  $('.templates .recipeResults').clone();
+
+    //set the recipe results in 'results'
+    var recipeLink = recipeResults.find('.recipe-link a');
+    recipeLink.attr('href',item.recipe.uri);
+    recipeLink.text(item.recipe.label);
+>>>>>>> gh-pages
+
+    // var recipeImage = recipeResults.find('.recipe-image');
+    recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');
 
     var recipeYield = recipeResults.find('.yield');
     recipeYield.text(item.recipe.yield + ' servings');
@@ -25,9 +38,14 @@ var showRecipe = function(item) {
     var recipeKCal = recipeResults.find('.calories');
     recipeKCal.text(Math.round(item.recipe.calories)  + ' Calories per Recipe');
 
+<<<<<<< HEAD
     var servingKcals = (parseInt(item.recipe.calories)/parseInt(item.recipe.yield));
     var servingCals = recipeResults.find('.serving-calories');
    	servingCals.html(servingKcals);
+=======
+    var servingKcals = ((item.recipe.calories)/(item.recipe.yield));
+    $('.serving-calories').html(servingKcals);
+>>>>>>> gh-pages
     
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
@@ -37,10 +55,17 @@ var showRecipe = function(item) {
 
     var recipeType = recipeResults.find('.diet-type');
     recipeType.text(item.recipe.dietLabels);
+<<<<<<< HEAD
     	//add string to 0 length arrays so item will not be blank
     	if (item.recipe.dietLabels.length === 0) {
     		recipeType.html('Not Applicable');
     	}
+=======
+        //add string to 0 length arrays so item will not be blank
+        if (item.recipe.dietLabels.length === 0) {
+            $('.diet-type').html('Not Applicable');
+        }
+>>>>>>> gh-pages
     
     var recipeHealth = recipeResults.find('.health-label');
     recipeHealth.text(item.recipe.healthLabels);
@@ -53,34 +78,40 @@ var showRecipe = function(item) {
     //nutritionLabel.text
 
     return recipeResults;
-};	
+};  
 
 
 
 
  function findRecipe(recipeSearch) {
- 	var recipeParams = {
- 		q: recipeSearch,
- 		'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
-		'app-id': '4bdd672f'
- 	};
+    var recipeParams = {
+        q: recipeSearch,
+        'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
+        'app-id': '4bdd672f'
+    };
 
-	$.ajax({
- 		url: 'https://api.edamam.com/search',
- 		data: recipeParams,
- 		dataType: "jsonp",
- 		type: "GET",
- 	})	
- 	.done(function(data){
- 		console.log(data);
+    $.ajax({
+        url: 'https://api.edamam.com/search',
+        data: recipeParams,
+        dataType: "jsonp",
+        type: "GET",
+    })  
+    .done(function(data){
+        console.log(data);
 
- 		$('.result-count').html('Your search of ' + recipeSearch + ' returned '+ data.count + ' results');
- 		$.each(data.hits,function(i, item){
- 			var recipe = showRecipe(item);
- 			$('.results').append(recipe);
+        $('.result-count').html('Your search of ' + recipeSearch + ' returned '+ data.count + ' results');
+        $.each(data.hits,function(i, item){
+            var recipe = showRecipe(item);
+            $('.results').append(recipe);
             //document.body.style.backgroundImage = "url(item.recipe.image)";
+<<<<<<< HEAD
  		}); 
  	});
 }
 
 
+=======
+        }); 
+    });
+}
+>>>>>>> gh-pages
