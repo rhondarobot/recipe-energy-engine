@@ -1,21 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @rhondarobot
- Unwatch 2
-  Star 0
- Fork 0 rhondarobot/food-api
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Tree: f08d974db4 Find file Copy pathfood-api/js/app.js
-f08d974  10 hours ago
-@tjstalcup tjstalcup Updates styles of results
-2 contributors @rhondarobot @tjstalcup
-RawBlameHistory     
-86 lines (65 sloc)  2.68 KB
- $(function(){
+$(function(){
     //prevent page from reloading on 'submit'
     $('.ingredient-search').submit(function(e){
         e.preventDefault(); 
@@ -98,7 +81,3 @@ var showRecipe = function(item) {
         }); 
     });
 }
-
-
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
