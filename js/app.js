@@ -8,18 +8,6 @@ $(function(){
  });
  //still need to add the different parameters for the code to append to html table
 var showRecipe = function(item) {
-<<<<<<< HEAD
-	//appending template to DOM when query deploys
-	var recipeResults =  $('.templates .recipeResults').clone();
-
-	//set the recipe results in 'results'
-	var recipeLink = recipeResults.find('.recipe-link a');
-    recipeLink.attr('href',item.recipe.uri);
-    recipeLink.text(item.recipe.label);
-
-    // var recipeImage = recipeResults.find('.recipe-image');
-    recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');
-=======
     //appending template to DOM when query deploys
     var recipeResults =  $('.templates .recipeResults').clone();
 
@@ -27,7 +15,6 @@ var showRecipe = function(item) {
     var recipeLink = recipeResults.find('.recipe-link a');
     recipeLink.attr('href',item.recipe.uri);
     recipeLink.text(item.recipe.label);
->>>>>>> gh-pages
 
     // var recipeImage = recipeResults.find('.recipe-image');
     recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');
@@ -38,14 +25,9 @@ var showRecipe = function(item) {
     var recipeKCal = recipeResults.find('.calories');
     recipeKCal.text(Math.round(item.recipe.calories)  + ' Calories per Recipe');
 
-<<<<<<< HEAD
     var servingKcals = (parseInt(item.recipe.calories)/parseInt(item.recipe.yield));
     var servingCals = recipeResults.find('.serving-calories');
-   	servingCals.html(servingKcals);
-=======
-    var servingKcals = ((item.recipe.calories)/(item.recipe.yield));
-    $('.serving-calories').html(servingKcals);
->>>>>>> gh-pages
+    servingCals.html(servingKcals);
     
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
@@ -55,17 +37,10 @@ var showRecipe = function(item) {
 
     var recipeType = recipeResults.find('.diet-type');
     recipeType.text(item.recipe.dietLabels);
-<<<<<<< HEAD
-    	//add string to 0 length arrays so item will not be blank
-    	if (item.recipe.dietLabels.length === 0) {
-    		recipeType.html('Not Applicable');
-    	}
-=======
         //add string to 0 length arrays so item will not be blank
         if (item.recipe.dietLabels.length === 0) {
-            $('.diet-type').html('Not Applicable');
+            recipeType.html('Not Applicable');
         }
->>>>>>> gh-pages
     
     var recipeHealth = recipeResults.find('.health-label');
     recipeHealth.text(item.recipe.healthLabels);
@@ -104,14 +79,6 @@ var showRecipe = function(item) {
             var recipe = showRecipe(item);
             $('.results').append(recipe);
             //document.body.style.backgroundImage = "url(item.recipe.image)";
-<<<<<<< HEAD
- 		}); 
- 	});
-}
-
-
-=======
         }); 
     });
 }
->>>>>>> gh-pages

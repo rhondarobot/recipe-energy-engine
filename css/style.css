@@ -39,29 +39,12 @@
     position: absolute;
     width: 100%;
     margin: 0;
-<<<<<<< HEAD
 }
 
 
 .recipeResults a {
     color: white;
     text-decoration: none;
-}
-
-.recipeResults:hover .info {
-    display: block;
-}
-
-.recipeResults:hover .recipe-link {
-    display: none;
-=======
-}
-
-
-.recipeResults a {
-    color: white;
-    text-decoration: none;
->>>>>>> gh-pages
 }
 
 .recipeResults:hover .info {
