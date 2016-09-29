@@ -2,9 +2,11 @@ $(function(){
     //prevent page from reloading on 'submit'
     $('.ingredient-search').submit(function(e){
         e.preventDefault(); 
-    var recipeSearch = $('.inputIngredient').val();
-    findRecipe(recipeSearch);   
-    })
+        var recipeSearch = $('.inputIngredient').val();
+        var low = $('.lowNum').val();
+        var high = $('.highNum').val();
+        findRecipe(recipeSearch,low,high);   
+    });
     // $('.calorie-search').submit(function(e){
     //     e.preventDefault();
     // var recipeSearch2 = $('inputCalorie').val();
@@ -34,21 +36,23 @@ var showRecipe = function(item) {
     var servingCals = recipeResults.find('.serving-calories');
     servingCals.html(Math.round(servingKcals) + ' calories per serving');
 
+    var info = recipeResults.find('.info');
+
     //example for sports API and what desired results will look like
         if(servingKcals >= 0 && servingKcals <=200) {
-            info.css('style','background-color: rgba(0,0,0,0.6)');
+            info.css('background-color','rgba(0,0,0,0.6)').append('You will need to walk 2,500 steps to burn this food off');
         } 
         else if(servingKcals >201 && servingKcals <=400) {
-            info.css('style','background-color: rgba(0,255,0,0.6');
+            info.css('background-color','rgba(0,255,0,0.6)').append('You will need to walk 5,000 steps to burn this food off');
         } 
         else if(servingKcals >401 && servingKcals <=600) {
-            info.css('style','background-color: rgba(0,0,255,0.6');
+            info.css('background-color','rgba(0,0,255,0.6)').append('You will need to walk 10,000 steps to burn this food off');
         }   
         else if(servingKcals >601 && servingKcals <=800)  {
-            info.css('style','background-color: rgba(255,0,255,0.6');
+            info.css('background-color','rgba(255,0,255,0.6)').append('You will need to walk 15,000 steps to burn this food off');
         }
         else {
-            info.css('style','background-color: rgba(255,0,0,0.6');
+            info.css('background-color','rgba(255,0,0,0.6)').append('You will need to walk 25,000 steps to burn this food off');
         }
         
 
@@ -91,12 +95,12 @@ var showRecipe = function(item) {
 // };      
 
 
- function findRecipe(recipeSearch) {
+ function findRecipe(recipeSearch,low,high) {
     var recipeParams = {
         q: recipeSearch,
         'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
         'app-id': '4bdd672f',
-        calories: 'gte0,lte5000',
+        calories: 'gte '+ low + ',lte ' + high,
         from: 0,
         to: 16
     };
@@ -110,12 +114,22 @@ var showRecipe = function(item) {
     .done(function(data){
         console.log(data);
 
-        $('.result-count').html('Your search of ' + recipeSearch + ' returned 16 of' + data.count + ' results');
+        $('.result-count').html('Your search of ' + recipeSearch + ' returned 16 of ' + data.count + ' results');
         $.each(data.hits,function(i, item){
             var recipe = showRecipe(item);
             $('.results').append(recipe);
+            //clear out search line
+            $('.inputIngredient').val('');
         }); 
+    // //function(newSearch){
+    //     var newSearch = ('.inputIngredient').val('');
+
+    // }    **trying to clear out previous results**
     });
+
+
+}
+
 }
 
 // tried to setup calorie search **didn't work**

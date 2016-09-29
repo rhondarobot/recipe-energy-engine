@@ -6,7 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">   
+	<link rel="shortcut icon" type="image/x-icon"  href="favicon.ico">
 </head>
 
 <header>
@@ -20,14 +21,10 @@
 		<form class="ingredient-search">
 			<div> <i class="fa fa-apple" aria-hidden="true"></i></div>
 			<input type="text" placeholder="Search recipes by ingredients, names or keywords i.e. 'low-sodium'" class="inputIngredient">
-			<input type="submit" value="Feed Me" class="find">
-		</form>	
-		<form class="calorie-search">
-			<div>Or Search By Calorie Content Range:
-			<div><span>From </span>
-			<input type="number" class="lowNum"><span> to </span>
-			<input type="number" class="highNum"> Calories</div>
-			<input type="submit" class="inputCalorie" value="Search">
+			<span>From </span>
+			<input type="number" class="lowNum" value="0"><span> to </span>
+			<input type="number" class="highNum" value="5000"> Calories</div>
+			<input type="submit" class="search-button" value="Feed Me">
 		</form>
 	</div>
 	
