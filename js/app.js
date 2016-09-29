@@ -80,7 +80,9 @@ var showRecipe = function(item) {
         q: recipeSearch,
         'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
         'app-id': '4bdd672f',
-        calories: 'gte0,lte5000'
+        calories: 'gte0,lte5000',
+        from: 0,
+        to: 16
     };
 
     $.ajax({
@@ -92,7 +94,7 @@ var showRecipe = function(item) {
     .done(function(data){
         console.log(data);
 
-        $('.result-count').html('Your search of ' + recipeSearch + ' returned '+ data.count + ' results');
+        $('.result-count').html('Your search of ' + recipeSearch + ' returned 16 of' + data.count + ' results');
         $.each(data.hits,function(i, item){
             var recipe = showRecipe(item);
             $('.results').append(recipe);

@@ -114,6 +114,9 @@ a.pink:hover { color: #d529cd; }
     display: none;
 }
 
-/*footer {
+/* footer {
+    background-color: #e3fddb;
     bottom: 0;
-}  <- goal is to get footer on the bottom */
+    height: 50px;
+    margin-top: 600px;
+} */
