@@ -5,6 +5,11 @@ $(function(){
     var recipeSearch = $('.inputIngredient').val();
     findRecipe(recipeSearch);   
     });
+    // $('.calorie-search').submit(function(e){
+    //     e.preventDefault();
+    // var recipeSearch2 = $('inputCalorie').val();
+    // findRecipe(recipeSearch2);    
+    // });
  });
  //still need to add the different parameters for the code to append to html table
 var showRecipe = function(item) {
@@ -28,7 +33,9 @@ var showRecipe = function(item) {
     var servingKcals = (parseInt(item.recipe.calories)/parseInt(item.recipe.yield));
     var servingCals = recipeResults.find('.serving-calories');
     servingCals.html(Math.round(servingKcals) + ' calories per serving');
+
     
+
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
 
@@ -49,20 +56,31 @@ var showRecipe = function(item) {
     recipeMeasurement.text(Math.round(item.recipe.totalWeight) + 'g');
 
     var nutrients = recipeResults.find('.nutrients');
+    nutrients.text(item.recipe.nutrients.CA);
     //move this to the bottom or side-bottom. Want to make a nutrition table/label
     //nutritionLabel.text
 
     return recipeResults;
 };  
+ 
+//trying to set a dynamic caloric range based on user's input. **not working**
+//     var showkcalRangeResults = function(item){
+//     var gte = $('.lowNum');
+//     var lte = $('.highNum');
 
-
+//     if (item.recipe.calories >= gte && item.recipe.calories <= lte) {
+//         $('.results').append(showRecipe);
+//     }
+//     console.log(showRecipe);
+// };
 
 
  function findRecipe(recipeSearch) {
     var recipeParams = {
         q: recipeSearch,
         'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
-        'app-id': '4bdd672f'
+        'app-id': '4bdd672f',
+        calories: 'gte0,lte5000'
     };
 
     $.ajax({
@@ -78,25 +96,50 @@ var showRecipe = function(item) {
         $.each(data.hits,function(i, item){
             var recipe = showRecipe(item);
             $('.results').append(recipe);
-            //document.body.style.backgroundImage = "url(item.recipe.image)";
         }); 
     });
 }
 
-  $('a').hover(function(e)
-    {
-        var randomClass = getRandomClass();
-        $(e.target).attr("class", randomClass);
-    });
+//tried to setup calorie search **didn't work**
+// function findRecipe(recipeSearch2) {
+//     var recipeParams = {
+//         q: recipeSearch2,
+//         'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
+//         'app-id': '4bdd672f',
+//         calories: "lte 0,ute 5000" 
+//     };
+
+//     $.ajax({
+//         url: 'https://api.edamam.com/search',
+//         data: recipeParams,
+//         dataType: "jsonp",
+//         type: "GET",
+//     })  
+//     .done(function(data){
+//         console.log(data);
+//         $('.result-count').html('Your search of ' + recipeSearch2 + ' calories returned ' + data.count + ' results');
+//         $.each(data.hits,function(i, item){
+//             var recipe = showRecipe(item);
+//             $('.results').append(recipe);
+//         }); 
+//     });
+// }
 
 
-function getRandomClass()
-{
-    //Store available css classes
-    var classes = new Array("green", "purple", "teal", "violet", "pink");
+//   ***Trying to change the color of hover color feature at random. Not working***
+//   $('a').hover(function(e)
+//     {
+//         var randomColor = getRandomColor();
+//         $(e.target).attr("class", randomColor);
+//     });
 
-    //Get a random number from 0 to 4
-    var randomNumber = Math.floor(Math.random()*5);
 
-    return classes[randomNumber];
-}
+// function getRandomColor() {
+//     //Store available css classes
+//     var classes = new Array("green", "purple", "teal", "violet", "pink");
+
+//     //Get a random number from 0 to 4
+//     var randomNumber = Math.floor(Math.random()*5);
+
+//     return classes[randomNumber];
+// }
