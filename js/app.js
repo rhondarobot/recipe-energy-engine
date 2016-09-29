@@ -34,7 +34,23 @@ var showRecipe = function(item) {
     var servingCals = recipeResults.find('.serving-calories');
     servingCals.html(Math.round(servingKcals) + ' calories per serving');
 
-    
+    //example for sports API and what desired results will look like
+        if(servingKcals >= 0 && servingKcals <=200) {
+            info.css('style','background-color: rgba(0,0,0,0.6)');
+        } 
+        else if(servingKcals >201 && servingKcals <=400) {
+            info.css('style','background-color: rgba(0,255,0,0.6');
+        } 
+        else if(servingKcals >401 && servingKcals <=600) {
+            info.css('style','background-color: rgba(0,0,255,0.6');
+        }   
+        else if(servingKcals >601 && servingKcals <=800)  {
+            info.css('style','background-color: rgba(255,0,255,0.6');
+        }
+        else {
+            info.css('style','background-color: rgba(255,0,0,0.6');
+        }
+        
 
     var ingredientCount = recipeResults.find('.ingredients-count');
     ingredientCount.text('(' + item.recipe.ingredients.length + ')');
