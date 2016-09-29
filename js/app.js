@@ -119,7 +119,6 @@ var showRecipe = function(item) {
             var recipe = showRecipe(item);
             $('.results').append(recipe);
             //clear out search line
-            $('.inputIngredient').val('');
         }); 
     // //function(newSearch){
     //     var newSearch = ('.inputIngredient').val('');
@@ -128,7 +127,6 @@ var showRecipe = function(item) {
     });
 
 
-}
 
 }
 
