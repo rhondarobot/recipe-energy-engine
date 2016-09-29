@@ -4,12 +4,12 @@ $(function(){
         e.preventDefault(); 
     var recipeSearch = $('.inputIngredient').val();
     findRecipe(recipeSearch);   
-    });
+    })
     // $('.calorie-search').submit(function(e){
     //     e.preventDefault();
     // var recipeSearch2 = $('inputCalorie').val();
     // findRecipe(recipeSearch2);    
-    // });
+    // })
  });
  //still need to add the different parameters for the code to append to html table
 var showRecipe = function(item) {
@@ -55,15 +55,15 @@ var showRecipe = function(item) {
     var recipeMeasurement = recipeResults.find('.measurement');
     recipeMeasurement.text(Math.round(item.recipe.totalWeight) + 'g');
 
-    var nutrients = recipeResults.find('.nutrients');
-    nutrients.text(item.recipe.nutrients.CA);
+    //var nutrients = recipeResults.find('.nutrients');
+    //nutrients.text(item.recipe.nutrients.CA);
     //move this to the bottom or side-bottom. Want to make a nutrition table/label
     //nutritionLabel.text
 
     return recipeResults;
 };  
  
-//trying to set a dynamic caloric range based on user's input. **not working**
+// trying to set a dynamic caloric range based on user's input. **not working**
 //     var showkcalRangeResults = function(item){
 //     var gte = $('.lowNum');
 //     var lte = $('.highNum');
@@ -71,8 +71,8 @@ var showRecipe = function(item) {
 //     if (item.recipe.calories >= gte && item.recipe.calories <= lte) {
 //         $('.results').append(showRecipe);
 //     }
-//     console.log(showRecipe);
-// };
+//     console.log(showkcalRangeResults);
+// };      
 
 
  function findRecipe(recipeSearch) {
@@ -100,7 +100,7 @@ var showRecipe = function(item) {
     });
 }
 
-//tried to setup calorie search **didn't work**
+// tried to setup calorie search **didn't work**
 // function findRecipe(recipeSearch2) {
 //     var recipeParams = {
 //         q: recipeSearch2,
