@@ -5,14 +5,9 @@ $(function(){
         var recipeSearch = $('.inputIngredient').val();
         var low = $('.lowNum').val();
         var high = $('.highNum').val();
-        findRecipe(recipeSearch,low,high);   
+        findRecipe(recipeSearch,low,high);  
     });
-    // $('.calorie-search').submit(function(e){
-    //     e.preventDefault();
-    // var recipeSearch2 = $('inputCalorie').val();
-    // findRecipe(recipeSearch2);    
-    // })
- });
+});    
  //still need to add the different parameters for the code to append to html table
 var showRecipe = function(item) {
     //appending template to DOM when query deploys
@@ -22,9 +17,11 @@ var showRecipe = function(item) {
     var recipeLink = recipeResults.find('.recipe-link a');
     recipeLink.attr('href',item.recipe.uri);
     recipeLink.text(item.recipe.label);
+    recipeLink = recipeResults.find('.info a');
+    recipeLink.attr('href',item.recipe.uri);
 
     // var recipeImage = recipeResults.find('.recipe-image');
-    recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');
+    recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');//'href',item.recipe.url
 
     var recipeYield = recipeResults.find('.yield');
     recipeYield.text(item.recipe.yield + ' servings');
@@ -114,19 +111,13 @@ var showRecipe = function(item) {
     .done(function(data){
         console.log(data);
 
-        $('.result-count').html('Your search of ' + recipeSearch + ' returned 16 of ' + data.count + ' results');
+        $('.result-count').html('Your search of ' + recipeSearch + ' returned ' + data.hits.length + ' of ' + data.count + ' results');
         $.each(data.hits,function(i, item){
             var recipe = showRecipe(item);
             $('.results').append(recipe);
             //clear out search line
         }); 
-    // //function(newSearch){
-    //     var newSearch = ('.inputIngredient').val('');
-
-    // }    **trying to clear out previous results**
     });
-
-
 
 }
 

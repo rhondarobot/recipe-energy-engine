@@ -104,11 +104,7 @@ h3 {
 .recipeResults:hover .info {
     display: block;
 }
-a.green:hover { background-color: #1ace84; }
-a.purple:hover { background-color: #a262c0; }
-a.teal:hover { color: #4ac0aa; }
-a.violet:hover { color: #8c78ba; }
-a.pink:hover { color: #d529cd; }
+
 
 .recipeResults:hover .recipe-link {
     display: none;
