@@ -45,6 +45,29 @@ h3 {
     height: 30px;
 }
 
+@media only screen and (max-width: 314px) {
+    .inputIngredient {
+        width: 300px;
+    }
+} 
+
+@media only screen and (min-width: 315px) and (max-width: 509px) {
+    .inputIngredient {
+        width: 300px;
+    }
+    .lowNum {
+        width: 100px;
+    }
+    .highNum {
+        width: 100px;
+    }
+} 
+
+.calorie-inputRow {
+    display: inline;
+    text-align: center;
+}
+
 .ingredient-search {
     text-align: center;
 }
@@ -56,11 +79,13 @@ h3 {
 .lowNum {
     background-color: rgba(88,219,219,0.2);
     height: 30px;
+    text-align: center;
 }
 
 .highNum {
     background-color: rgba(88,219,219,0.3);
-    height: 30px;ss
+    height: 30px;
+    text-align: center;
 }
 .hidden {
     display: none;
@@ -87,6 +112,13 @@ h3 {
     width: 20%;
 }
 
+@media only screen and (max-width: 700px) {
+    .recipeResults {
+        width: 40%;
+        margin: 20px 5%;
+    }
+}
+
 .info {
     background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
@@ -111,13 +143,6 @@ h3 {
     width: 100%;
     margin: 0;
     overflow: hidden;
-}
-
-@media only screen and (max-width: 700px) {
-    .recipeResults {
-        width: 40%;
-        margin: 20px 5%;
-    }
 }
 
 .recipeResults a {
