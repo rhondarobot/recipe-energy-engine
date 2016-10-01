@@ -2,6 +2,8 @@ $(function(){
     //prevent page from reloading on 'submit'
     $('.ingredient-search').submit(function(e){
         e.preventDefault(); 
+        //zero out previous search if results have shown
+        $('.results').html('');
         var recipeSearch = $('.inputIngredient').val();
         var low = $('.lowNum').val();
         var high = $('.highNum').val();
@@ -103,7 +105,8 @@ var showRecipe = function(item) {
         $.each(data.hits,function(i, item){
             var recipe = showRecipe(item);
             $('.results').append(recipe);
-            //clear out search line
+            //clear out search line & results at next search
+            $('.inputIngredient').val('');
         }); 
     });
 
