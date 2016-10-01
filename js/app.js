@@ -18,7 +18,7 @@ var showRecipe = function(item) {
     recipeLink.attr('href',item.recipe.uri);
     recipeLink.text(item.recipe.label);
     recipeLink = recipeResults.find('.info a');
-    recipeLink.attr('href',item.recipe.uri);
+    recipeLink.attr('href',item.recipe.url);
 
     // var recipeImage = recipeResults.find('.recipe-image');
     recipeResults.attr('style','background-image: url("'+item.recipe.image+'")');//'href',item.recipe.url
@@ -79,19 +79,7 @@ var showRecipe = function(item) {
 
     return recipeResults;
 };  
- 
-// trying to set a dynamic caloric range based on user's input. **not working**
-//     var showkcalRangeResults = function(item){
-//     var gte = $('.lowNum');
-//     var lte = $('.highNum');
-
-//     if (item.recipe.calories >= gte && item.recipe.calories <= lte) {
-//         $('.results').append(showRecipe);
-//     }
-//     console.log(showkcalRangeResults);
-// };      
-
-
+   
  function findRecipe(recipeSearch,low,high) {
     var recipeParams = {
         q: recipeSearch,
@@ -121,46 +109,3 @@ var showRecipe = function(item) {
 
 }
 
-// tried to setup calorie search **didn't work**
-// function findRecipe(recipeSearch2) {
-//     var recipeParams = {
-//         q: recipeSearch2,
-//         'app-key': 'X1-ZWz19kmj7cegwb_1acr8',
-//         'app-id': '4bdd672f',
-//         calories: "lte 0,ute 5000" 
-//     };
-
-//     $.ajax({
-//         url: 'https://api.edamam.com/search',
-//         data: recipeParams,
-//         dataType: "jsonp",
-//         type: "GET",
-//     })  
-//     .done(function(data){
-//         console.log(data);
-//         $('.result-count').html('Your search of ' + recipeSearch2 + ' calories returned ' + data.count + ' results');
-//         $.each(data.hits,function(i, item){
-//             var recipe = showRecipe(item);
-//             $('.results').append(recipe);
-//         }); 
-//     });
-// }
-
-
-//   ***Trying to change the color of hover color feature at random. Not working***
-//   $('a').hover(function(e)
-//     {
-//         var randomColor = getRandomColor();
-//         $(e.target).attr("class", randomColor);
-//     });
-
-
-// function getRandomColor() {
-//     //Store available css classes
-//     var classes = new Array("green", "purple", "teal", "violet", "pink");
-
-//     //Get a random number from 0 to 4
-//     var randomNumber = Math.floor(Math.random()*5);
-
-//     return classes[randomNumber];
-// }

@@ -1,3 +1,4 @@
+/*page breaks at 564px*/
 body {
     height: 1000px;
     background: #e3fddb; /* For browsers that do not support gradients */
@@ -18,34 +19,49 @@ h3 {
 }
 
 .intro { /*how come the padding is not centered?*/
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
-.find { 
+.fa {
+    padding: 25px;
+    color: #fff;
+}
+
+.feedme-button { 
     background-color: #fff;
     border-radius: 5px;
     text-align: center;
+    padding: 7px;
 }
 
+.words {
+    font-family: 'Bungee Shade', Arial, sans-serif;
+}
 .inputIngredient {
     width: 500px;
     text-align: center;
-}
-.calorie-submit { /*how to center button below but centered from search fields*/
     background-color: #fff;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 6px;
+    height: 30px;
 }
+
 .ingredient-search {
     text-align: center;
 }
 .calorie-search {
     margin-top: 20px;
-    text-align: center
+    text-align: center;
 }
 
+.lowNum {
+    background-color: rgba(88,219,219,0.2);
+    height: 30px;
+}
+
+.highNum {
+    background-color: rgba(88,219,219,0.3);
+    height: 30px;ss
+}
 .hidden {
     display: none;
 }
@@ -105,14 +121,7 @@ h3 {
     display: block;
 }
 
-
 .recipeResults:hover .recipe-link {
     display: none;
 }
 
-/* footer {
-    background-color: #e3fddb;
-    bottom: 0;
-    height: 50px;
-    margin-top: 600px;
-} */
