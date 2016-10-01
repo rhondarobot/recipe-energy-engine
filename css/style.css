@@ -24,7 +24,7 @@ h3 {
 }
 
 .fa {
-    padding: 25px;
+    margin-bottom: 25px;
     color: #fff;
 }
 
@@ -81,7 +81,7 @@ h3 {
     float: left;
     font-family: sans-serif;
     height: 200px;
-    margin: 20px 2%;
+    margin: 20px 2.5%;
     position: relative;
     text-align: center;
     width: 20%;
@@ -98,6 +98,7 @@ h3 {
     position: absolute;
     right: 0;
     top: 0;
+    overflow: scroll;
 }
 
 .recipe-link {
@@ -109,8 +110,15 @@ h3 {
     position: absolute;
     width: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
+@media only screen and (max-width: 700px) {
+    .recipeResults {
+        width: 40%;
+        margin: 20px 5%;
+    }
+}
 
 .recipeResults a {
     color: white;
