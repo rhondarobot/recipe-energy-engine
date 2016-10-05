@@ -35,9 +35,21 @@ h3 {
     padding: 7px;
 }
 
+.user-weight {
+    background-color: #fff;
+    height: 30px;
+    text-align: center;
+    width: 150px;
+}
+
 .words {
     font-family: 'Bungee Shade', Arial, sans-serif;
 }
+
+.user-weight {
+    margin-right:2px;
+}
+
 .inputIngredient {
     width: 500px;
     text-align: center;
@@ -131,6 +143,16 @@ h3 {
     right: 0;
     top: 0;
     overflow: scroll;
+}
+
+
+.yield {
+    text-align: center;
+    margin-top: 0px;
+}
+
+info.feedback {
+    font-family: 'Dancing Script',Arial,sans-serif;
 }
 
 .recipe-link {
