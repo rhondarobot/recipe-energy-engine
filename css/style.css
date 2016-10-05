@@ -87,6 +87,9 @@ h3 {
     .user-weight {
         margin-bottom: 2px;
     }
+    .phone-instructions {
+        display: inline-block;
+    }
 } 
 
 .calorie-inputRow {
