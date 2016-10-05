@@ -133,7 +133,8 @@ h3 {
     color: white;
     display: block;
     float: left;
-    font-family: sans-serif;
+    font-family: 'Dancing Script',Arial,sans-serif;
+    font-size: 22px;
     height: 200px;
     margin: 20px 2.5%;
     position: relative;
@@ -148,12 +149,13 @@ h3 {
     }
 }
 
+
 .info {
     background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
     bottom: 0;
     display: none;
-    font-size: 18px;
+    font-size: 20px;
     left: 0;
     padding: 10px;
     position: absolute;
@@ -168,9 +170,6 @@ h3 {
     margin-top: 0px;
 }
 
-info.feedback {
-    font-family: 'Dancing Script',Arial,sans-serif;
-}
 
 .recipe-link {
     background-color: rgba(0,0,0,0.5);
@@ -197,3 +196,7 @@ info.feedback {
     display: none;
 }
 
+.recipeResults:hover .info p {
+    font-family: sans-serif;
+    font-size: 18px;
+}

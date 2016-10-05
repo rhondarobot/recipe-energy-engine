@@ -59,15 +59,12 @@ var showRecipe = function(item) {
     return Math.ceil((servingKcals / (((0.0171 * KPH3) - (0.1062 * KPH2) + (0.6080 * KPH) + 1.8600) * WKG)) * 60);
 };
 
-// console.log('walking an hour would burn',':',walking(200,60,4),'calories');
-// console.log('to walk off a Big Mac you need to walk ',':',walkingOff(563,200),'minutes');
-
     //example for sports API and what desired results will look like
         if(servingKcals >= 0 && servingKcals <=200) {
             info.css('background-color','rgba(0,0,0,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn this recipe off. Not bad.','</p>');
         } 
         else if(servingKcals >201 && servingKcals <=400) {
-            info.css('background-color','rgba(0,255,0,0.8)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn this recipe off. You got this!','</p>');
+            info.css('background-color','rgba(0,128,0,0.8)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn this recipe off. You got this!','</p>');
         } 
         else if(servingKcals >401 && servingKcals <=600) {
             info.css('background-color','rgba(0,0,255,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn this recipe off. Put on some good walking shoes!','</p>');
@@ -76,7 +73,7 @@ var showRecipe = function(item) {
             info.css('background-color','rgba(255,0,255,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn this recipe off. Better bring some water!','</p>');
         }
         else {
-            info.css('background-color','rgba(255,0,0,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn this recipe off. Tie up those laces..this will be a while','</p>');
+            info.css('background-color','rgba(255,0,0,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn this recipe off. Tie up those laces..this will take a while','</p>');
         }
         
 
