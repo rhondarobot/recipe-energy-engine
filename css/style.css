@@ -23,6 +23,11 @@ h3 {
     text-align: center;
 }
 
+.phone-instructions {
+    display: none;
+}
+
+
 .fa {
     margin-bottom: 25px;
     color: #fff;
@@ -72,6 +77,15 @@ h3 {
     }
     .highNum {
         width: 100px;
+    }
+    .info {
+        font-size: 14px;
+    }
+    .intro {
+        display: none;
+    }
+    .user-weight {
+        margin-bottom: 2px;
     }
 } 
 

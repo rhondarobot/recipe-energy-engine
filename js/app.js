@@ -124,8 +124,6 @@ var showRecipe = function(item) {
         type: "GET",
     })  
     .done(function(data){
-        console.log(data);
-
         $('.result-count').html('Your search of ' + recipeSearch + ' returned ' + data.hits.length + ' of ' + data.count + ' results');
         $.each(data.hits,function(i, item){
             var recipe = showRecipe(item);
