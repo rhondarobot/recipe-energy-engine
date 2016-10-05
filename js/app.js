@@ -7,6 +7,12 @@ $(function(){
         var recipeSearch = $('.inputIngredient').val();
         var low = $('.lowNum').val();
         var high = $('.highNum').val();
+        if(low == ''){
+            low = 0;
+        }
+        if(high == ''){
+            high = 5000;
+        }
         findRecipe(recipeSearch,low,high);  
     });
 });    

@@ -45,14 +45,7 @@ h3 {
     height: 30px;
     text-align: center;
     width: 150px;
-}
-
-.words {
-    font-family: 'Bungee Shade', Arial, sans-serif;
-}
-
-.user-weight {
-    margin-right:2px;
+    margin-right: 2px;
 }
 
 .inputIngredient {
@@ -60,7 +53,18 @@ h3 {
     text-align: center;
     background-color: #fff;
     height: 30px;
+    margin: 7px 0;
 }
+
+.words {
+    font-family: 'Bungee Shade', Arial, sans-serif;
+}
+
+.calorie-inputRow span {
+    display: block;
+    margin: 7px 0;
+}
+
 
 @media only screen and (max-width: 314px) {
     .inputIngredient {
@@ -170,7 +174,6 @@ h3 {
     margin-top: 0px;
 }
 
-
 .recipe-link {
     background-color: rgba(0,0,0,0.5);
     bottom: 0;
@@ -199,4 +202,12 @@ h3 {
 .recipeResults:hover .info p {
     font-family: sans-serif;
     font-size: 18px;
+}
+
+footer {
+    text-align: left;
+    margin: 15px 32px;
+    position: static;
+    bottom: 0;
+    display: block;
 }
