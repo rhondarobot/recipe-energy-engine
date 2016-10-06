@@ -17,8 +17,12 @@ h3 {
     text-align: center;
 }
 
-.intro { /*how come the padding is not centered?*/
+.intro {
     padding: 5px;
+    text-align: center;
+}
+
+.search-instructions {
     text-align: center;
 }
 
