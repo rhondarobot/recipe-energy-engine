@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Healthy Meal Search</title>
+	<title>Recipe Energy Engine</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
@@ -11,25 +11,23 @@
 	<link rel="icon" type="image/png" href="recipe-book.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-<header>
-	<h1>Recipe   Energy   Engine</h1>
-	<h3 class="welcome">Welcome!</h3>
-	<p class="intro">Find your next recipe based on <span class="words">YOUR</span> preferences.  Want to search for gluten-free recipes?  Type in 'gluten-free' in the search bar. Want to search by vitamins? Try typing in 'vitamin C'. What about minerals? Yes! Try typing in a mineral like 'calcium' to return foods with calcium.</p>
-	<h3 class="phone-instructions">
-	Tap on the recipe name for more info about calories per serving and how many minutes you need to walk to burn off that yummy food!
-</header>
-
 <body>
+	<header>
+		<h1>Recipe   Energy   Engine</h1>
+		<h3 class="welcome">Welcome!</h3>
+		<p class="intro">Find your next recipe based on <span class="words">YOUR</span> preferences.  Want to search for gluten-free recipes?  	Type in 'gluten-free' in the search bar. Want to search by 		vitamins? Try typing in 'vitamin C'. What about minerals? Yes! Try 	typing in a mineral like 'calcium' to return foods with calcium.</p>
+		<h3 class="phone-instructions">
+		Tap on the recipe name for more info about calories per serving and 	how many minutes you need to walk to burn off that yummy food!
+		</h3>
+	</header>
 	<div class="wrapper">
 		<form class="ingredient-search">
 			<div><i class="fa fa-cutlery fa-4x" aria-hidden="true"></i></div>
 			<input type="number" class="user-weight" placeholder="Your weight in lbs"><input type="text" placeholder="Search recipes by ingredients, vitamins or keywords i.e. 'low-sodium'" class="inputIngredient">
-			<p>
 			<div class="calorie-inputRow">
 			<span class="words">From </span>
 			<input type="number" class="lowNum" value="0"><span class="words"> to </span>
-			<input type="number" class="highNum" value="5000"><span class="words"> Calories</span></p>
+			<input type="number" class="highNum" value="5000"><span class="words"> Calories</span>
 			<p><span class="button">
 			<input type="submit" class="feedme-button" value="Feed Me"></span></p></div>
 		</form>
@@ -38,7 +36,6 @@
 	<p class="result-count"></p>
 	<div class="results"></div>
     <div class="templates hidden">
-    
     	<div class="recipeResults">
     		<p class='recipe-link'>
     			<a href="" target="_blank"></a></p>
@@ -47,7 +44,7 @@
 					<p class="yield"></p>
 					<p class="serving-calories"></p></a>
 				<!--<p class="nutrients"></p></a>version2-->	
-		<!--<div class="expand">
+			<!--<div class="expand">
 			<p class="diet-type"></p>
 			<p class="health-label"></p>
 			<p class="nutrition-label"></p>
@@ -56,15 +53,13 @@
 		</div>	-->
 				</div>
 		</div>
-	</div>			
-					
-	
-
-
-<footer>
-	<img src="images/edamam.png" alt="edamam logo"> 
-	         developer.edamam.com 		
-</footer>
+	</div>				
+	<footer>
+		<div class="edamam">
+			<img src="images/edamam.png" alt="edamam logo"> 
+		    <p>developer.edamam.com</p> 
+		</div>    		
+	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="js/app.js"></script>
 </body>

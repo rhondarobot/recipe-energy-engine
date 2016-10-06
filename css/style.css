@@ -1,6 +1,5 @@
 /*page breaks at 564px*/
 body {
-    height: 1000px;
     background: #e3fddb; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left top, #e3fddb, #58dbdb); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom right, #e3fddb, #58dbdb); /* For Opera 11.1 to 12.0 */
@@ -65,6 +64,9 @@ h3 {
     margin: 7px 0;
 }
 
+.results {
+    overflow: auto;
+}
 
 @media only screen and (max-width: 314px) {
     .inputIngredient {
@@ -206,9 +208,7 @@ h3 {
 
 footer {
     text-align: right;
-    margin: 50px 32px;
-    position: absolute;
-    bottom: 75%;
     font-size: 8px;
+     margin: 2px 22px;
 }
 
