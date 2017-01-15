@@ -8,10 +8,10 @@ body {
 }
 
 h1 {
-    text-align: center;
     font-family: 'Bungee Shade', Arial, sans-serif;
     font-size: 50px;
     margin: 12px 0;
+    text-align: center;
 }
 
 h3 {
@@ -40,8 +40,8 @@ h3 {
 .feedme-button { 
     background-color: #fff;
     border-radius: 5px;
-    text-align: center;
     padding: 7px;
+    text-align: center;
 }
 
 .user-weight {
