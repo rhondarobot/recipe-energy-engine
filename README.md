@@ -8,6 +8,7 @@
 
 >>1. Enter your weight in pounds (lbs)
 >>2. Enter a recipe of interest via search term: 
+
 Recipe Search Ideas |     Examples
 ------------------- | -------------------
 Keywords |'Chicken' or 'Chocolate Cake'
