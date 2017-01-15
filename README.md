@@ -8,17 +8,23 @@
 
 >>1. Enter your weight in pounds (lbs)
 >>2. Enter a recipe of interest via search term: 
->>>>>a. Keywords (i.e. 'Chicken' or 'Chocolate Cake', etc.)
->>>>>b. Diet Types (i.e. 'Gluten-Free' or 'Diabetic', etc.)
->>>>>c. Vitamins (i.e. 'Vitamin E' or 'Folic Acid', etc.)
->>>>>d. Minerals (i.e. 'Magnesium' or 'Calcium', etc.)
+Recipe Search Ideas |     Examples
+------------------- | -------------------
+Keywords |'Chicken' or 'Chocolate Cake'
+Diet Types | 'Gluten-Free' or 'Diabetic'
+Vitamins | 'Vitamin E' or 'Folic Acid'
+Minerals | 'Magnesium' or 'Calcium'
 >>3. Enter desired calorie range or search all calorie ranges.
->>>>>**Calorie Ranges are color coded when you hover over the picture:**
->>>>>>>>>>*  0 - 200 calories: black green(400) blue(600) pink(800) red(>801)
->>>>>>>>>>*201 - 400 calories: green
->>>>>>>>>>*401 - 600 calories: blue
->>>>>>>>>>*601 - 800 calories: pink
->>>>>>>>>>*800+ calories: red
+
+**Calorie Ranges are color coded when you hover over the picture:**
+
+Calorie Ranges | Hover Color
+-------------- | -----------
+0 - 200 | black 
+201 - 400 | green
+401 - 600 | blue
+601 - 800 | pink
+800+ | red
 
 ![Example of Searching](/images/REE_main.png)
 
