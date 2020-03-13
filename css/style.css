@@ -6,7 +6,7 @@ body {
     background: -moz-linear-gradient(bottom right, #e3fddb, #58dbdb); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #e3fddb, #58dbdb); /* Standard syntax (must be last) */
     height: 100vh;
-    font-size: 24px;
+    font-size: 20px;
     margin: 1rem 3rem;
 }
 
@@ -32,10 +32,12 @@ h3 {
 .intro {
     padding: 5px;
     text-align: center;
+    font-size: 1rem;
 }
 
 .search-instructions {
     text-align: center;
+    font-size: 1rem;
 }
 
 .phone-instructions {
