@@ -6,10 +6,12 @@ body {
     background: -moz-linear-gradient(bottom right, #e3fddb, #58dbdb); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #e3fddb, #58dbdb); /* Standard syntax (must be last) */
     height: 100vh;
+    font-size: 24px;
+    margin: 1rem 3rem;
 }
 
 .edamam {
-  position: absolute;
+  position: relative;
 }
 
 #edamam-badge {
@@ -59,6 +61,7 @@ h3 {
     text-align: center;
     width: 150px;
     margin-right: 2px;
+    font-size: 1rem;
 }
 
 .inputIngredient {
@@ -67,6 +70,7 @@ h3 {
     background-color: #fff;
     height: 30px;
     margin: 7px 0;
+    font-size: 1rem;
 }
 
 .words {
@@ -83,32 +87,36 @@ h3 {
 }
 
 @media only screen and (max-width: 314px) {
-    .inputIngredient {
-        width: 300px;
-    }
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .inputIngredient {
+    width: 300px;
+  }
 } 
 
 @media only screen and (min-width: 315px) and (max-width: 509px) {
     .inputIngredient {
-        width: 300px;
+      width: 300px;
     }
     .lowNum {
-        width: 100px;
+      width: 100px;
     }
     .highNum {
-        width: 100px;
+      width: 100px;
     }
     .info {
-        font-size: 14px;
+      font-size: 14px;
     }
     .intro {
-        display: none;
+      display: none;
     }
     .user-weight {
-        margin-bottom: 2px;
+      margin-bottom: 2px;
     }
     .phone-instructions {
-        display: inline-block;
+      display: inline-block;
     }
 } 
 
