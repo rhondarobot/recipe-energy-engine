@@ -110,77 +110,6 @@ var showRecipe = function (item) {
   return recipeResults;
 };
 
-<<<<<<< HEAD
-    //example for sports API and what desired results will look like
-        if(servingKcals >= 0 && servingKcals <=200) {
-            info.css('background-color','rgba(0,0,0,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn off one serving from this recipe. Not bad.','</p>');
-        } 
-        else if(servingKcals >201 && servingKcals <=400) {
-            info.css('background-color','rgba(0,128,0,0.8)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn off one serving from this recipe. You got this!','</p>');
-        } 
-        else if(servingKcals >401 && servingKcals <=600) {
-            info.css('background-color','rgba(0,0,255,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn off one serving from this recipe. Put on some good walking shoes!','</p>');
-        }   
-        else if(servingKcals >601 && servingKcals <=800)  {
-            info.css('background-color','rgba(255,0,255,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn off one serving from this recipe. Better bring some water!','</p>');
-        }
-        else {
-            info.css('background-color','rgba(255,0,0,0.6)').append('<p class="feedback">','You will need to walk ',walkingOff(servingKcals,enterWeight),' minutes to burn off one serving from this recipe. Tie up those laces..this will take a while','</p>');
-        }
-        
-
-    var ingredientCount = recipeResults.find('.ingredients-count');
-    ingredientCount.text('(' + item.recipe.ingredients.length + ')');
-
-    var recipeIngredients = recipeResults.find('.ingredients');
-    recipeIngredients.text(item.recipe.ingredientLines);
-
-    var recipeType = recipeResults.find('.diet-type');
-    recipeType.text(item.recipe.dietLabels);
-        //add string to 0 length arrays so item will not be blank
-        if (item.recipe.dietLabels.length === 0) {
-            recipeType.html('Not Applicable');
-        }
-    
-    var recipeHealth = recipeResults.find('.health-label');
-    recipeHealth.text(item.recipe.healthLabels);
-
-    var recipeMeasurement = recipeResults.find('.measurement');
-    recipeMeasurement.text(Math.round(item.recipe.totalWeight) + 'g');
-
-    //var nutrients = recipeResults.find('.nutrients');
-    //nutrients.text(item.recipe.nutrients.CA);
-    //move this to the bottom or side-bottom. Want to make a nutrition table/label
-    //nutritionLabel.text
-
-    return recipeResults;
-};  
-   
- function findRecipe(recipeSearch,low,high) {
-    var recipeParams = {
-        q: recipeSearch,
-        app_key: '3307e1133463374fba27540d8dd5ea7d',
-        app_id: '4bdd672f',
-        calories: 'gte '+ low + ',lte ' + high,
-        from: 0,
-        to: 16
-    };
-
-    $.ajax({
-        url: 'https://api.edamam.com/search',
-        data: recipeParams,
-        dataType: "jsonp",
-        type: "GET",
-    })  
-    .done(function(data){
-        $('.result-count').html('Your search of ' + recipeSearch + ' returned ' + data.hits.length + ' of ' + data.count + ' results');
-        $.each(data.hits,function(i, item){
-            var recipe = showRecipe(item);
-            $('.results').append(recipe);
-            //clear out search line & results at next search
-            $('.inputIngredient').val('');
-        }); 
-=======
 function findRecipe(recipeSearch, low, high) {
   var recipeParams = {
     q: recipeSearch,
@@ -205,6 +134,5 @@ function findRecipe(recipeSearch, low, high) {
         //clear out search line & results at next search
         $('.inputIngredient').val('');
       });
->>>>>>> 7acb4b6209c7eddc849c6f410a91c37fb72658f5
     });
 }
