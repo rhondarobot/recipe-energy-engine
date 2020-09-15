@@ -113,9 +113,9 @@ var showRecipe = function (item) {
 function findRecipe(recipeSearch, low, high) {
   var recipeParams = {
     q: recipeSearch,
-    app_key: '3307e1133463374fba27540d8dd5ea7d',
-    app_id: '4bdd672f',
-    calories: 'gte ' + low + ',lte ' + high,
+    app_key: 'e9c5455adce30b4d74fdd91b084cc2a4',
+    app_id: '727a6a82',
+    calories: low + '-' + high,
     from: 0,
     to: 16
   };
