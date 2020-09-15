@@ -1,5 +1,5 @@
 # Recipe Energy Engine
-### A recipe search engine that let's you know how many minutes you have to *walk* to BURN off the meal you just ate. https://rhondarobot.github.io/food-api/
+### A recipe search engine that let's you know how many minutes you have to *walk* to BURN off the meal you just ate. https://rhondarobot.github.io/recipe-energy-engine/
 
 #### Example: 
 
